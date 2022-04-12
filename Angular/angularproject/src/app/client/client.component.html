@@ -1,0 +1,28 @@
+<div class="container">
+<form #clientform="ngForm" (ngSubmit)="submit(clientform.value)">
+  
+    <div class="mb-3">
+      <label for="form2Example2" class="form-label">Bussiness Name:</label>
+      <input name="name" type="text" class="form-control" id="name">
+    </div>
+    <div class="mb-3">
+      <label for="form2Example2" class="form-label">GST number:</label>
+      <input name="gstNumber" type="text" class="form-control" id="gstNumber">
+    </div>
+    <div class="mb-3">
+      <label for="form2Example2" class="form-label">Address:</label>
+      <input name="address" type="text" class="form-control" id="address">
+    </div>
+    <div class="mb-3">
+      <label for="form2Example2" class="form-label">PAN Number:</label>
+      <input name="pan" type="text" class="form-control" id="pan">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+   <!-- <a routerLink="Invoice">add</a> -->
+
+  </form>
+  
+
+</div>

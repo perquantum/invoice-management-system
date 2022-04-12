@@ -1,0 +1,79 @@
+<div class="container">
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+        Add products
+      </button> -->
+      <form [formGroup]="form" (onsubmit)="submit()">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Items ID</th>
+        <th scope="col">Item Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Tax</th>
+        <th scope="col">Amount</th>
+
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <th scope="row">1<input type="text" hidden id="id" value="1" formControlName="id" ></th>
+        <td>cococola<input type="text" hidden id="itemname" value="cococola"name="itemnam" formControlName="itemnam" [(ngModel)]="itemnam"></td>
+        <td><input type="number"min="0" max="100"  #amount (change)="addprice(amount.value)" id="quantity" formControlName="quantity"></td>
+        <td>{{total}} <input type="number" hidden value="{{total}}"  id="price"  formControlName="price"></td>
+        <td><input type="number"min="0" max="100" #tax (change)="addtax(tax.value)" id="tax"formControlName="tax"></td>
+        <td>{{amoun}}<input type="number"  hidden id="amount" value="{{amoun}}"  formControlName="amount"></td>
+    
+      </tr>
+    </tbody>
+  </table> 
+  <button type="submit" class="btn btn-primary"  routerLink="Invoice">submit</button>
+</form>
+
+    <!-- The Modal
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+       
+        <div class="modal-header">
+          <h4 class="modal-title">Add products</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+      
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Default file input example</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+              <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                <input class="form-control" type="file" id="formFileMultiple" multiple>
+              </div>
+              <div class="mb-3">
+                <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+                <input class="form-control" type="file" id="formFileDisabled" disabled>
+              </div>
+              <div class="mb-3">
+                <label for="formFileSm" class="form-label">Small file input example</label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file">
+              </div>
+              <div>
+                <label for="formFileLg" class="form-label">Large file input example</label>
+                <input class="form-control form-control-lg" id="formFileLg" type="file">
+              </div>
+        </div>
+  
+       
+        <div class="modal-footer">
+           
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>  -->
+</div>
