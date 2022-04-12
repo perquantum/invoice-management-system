@@ -8,12 +8,14 @@ import { ProductListComponent } from './product-list/product-list.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
+import { SelectClientComponent } from './select-client/select-client.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InvoiceComponent,
-    ProductListComponent
+    ProductListComponent,
+    SelectClientComponent
   ],
   imports: [
     BrowserModule,

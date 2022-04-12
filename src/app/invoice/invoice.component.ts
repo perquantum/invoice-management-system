@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataServiceService } from '../data-service.service';
 
 @Component({
   selector: 'app-invoice',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvoiceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dS: DataServiceService) { }
+  clientData: any;
 
+
+  addToClientData(data: any) {
+    this.clientData = data;
+    console.log(this.clientData);
+  }
   ngOnInit(): void {
+    this.dS.getClientDataById(this.dS.selectedClientId).subscribe((data) => this.addToClientData(data));
+
   }
 
 }

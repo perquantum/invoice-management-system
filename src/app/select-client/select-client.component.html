@@ -1,9 +1,23 @@
-<table class="table">
+<label> Select Client: </label>
+
+<select #myselect (change)="selectClient(myselect.value)">
+
+    <option>...</option>
+    <option *ngFor="let client of Clients" [value]="client.id"> {{client.name}} </option>
+
+</select>
+
+<button class="btn-primary" (click)="submitSelectedClient()">
+    Submit
+</button>
+
+
+<!-- <table class="table">
     <thead>
       <tr>
-        <th scope="col">Items</th>
-        <th scope="col">Description</th>
-        <th scope="col">Quantity</th>
+        <th scope="col">#</th>
+        <th scope="col">Client Name</th>
+        <th scope="col">Invoice</th>
         <th scope="col">Price</th>
         <th scope="col">Tax</th>
         <th scope="col">Amount</th>
@@ -20,4 +34,4 @@
       </tr>
       
     </tbody>
-  </table>
+  </table> -->

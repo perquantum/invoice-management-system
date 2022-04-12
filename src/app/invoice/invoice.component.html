@@ -2,7 +2,10 @@
 
     <div class="row">
         <div class="col">
-            Invoice
+            <div  class="custom-center">
+                Invoice
+
+            </div>
         </div>
         <div class="col">
             <div>
@@ -26,14 +29,14 @@
 
 <div class="row">
     <div>
-        <div class="txt-bold">Bill To:</div> 
-        <div class="txt-bold">Bussiness Name: </div> 
-        <div class="txt-bold">Address: </div> 
-        <div class="col">
+        <div class="txt-bold">Bill To: {{ clientData.pan}}</div> 
+        <div class="txt-bold">Bussiness Name: {{ clientData.name}}</div> 
+        <div class="txt-bold">Address: {{ clientData.address}}</div> 
+        <!-- <div class="col">
             <span class="txt-bold">City: </span>
             <span class="txt-bold">State: </span>
-        </div>
-        <div class="txt-bold">Contact Number: </div> 
+        </div> -->
+        <div class="txt-bold">Contact Number: {{ clientData.address}}</div> 
 
     </div>
 
